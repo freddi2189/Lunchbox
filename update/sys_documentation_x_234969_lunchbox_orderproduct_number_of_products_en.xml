@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="number_of_products" label="Number of Products" language="en" table="x_234969_lunchbox_orderproduct">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>number_of_products</element>
+            <help/>
+            <hint/>
+            <label>Number of Products</label>
+            <language>en</language>
+            <name>x_234969_lunchbox_orderproduct</name>
+            <plural>Number of Products</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-08-01 08:15:48</sys_created_on>
+            <sys_id>5ccb2ddf372313004032ae7873990e8d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Number of Products</sys_name>
+            <sys_package display_value="LunchBox" source="x_234969_lunchbox">f967d835372f13004032ae7873990ed1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="LunchBox">f967d835372f13004032ae7873990ed1</sys_scope>
+            <sys_update_name>sys_documentation_x_234969_lunchbox_orderproduct_number_of_products_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-08-01 08:15:48</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

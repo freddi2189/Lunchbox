@@ -4,7 +4,7 @@
         <element label="Grocery List" max_length="32" name="grocery_list" reference="x_234969_lunchbox_grocery_list" type="reference"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
         <element default="javascript:gs.now()" dynamic_default_value="fb7553e85f220100a9ad2572f2b477b4" label="Order date" mandatory="true" max_length="40" name="order_date" type="glide_date" use_dynamic_default="true"/>
-        <element label="Order list" mandatory="true" max_length="4000" name="order_list" reference="x_234969_lunchbox_product" type="glide_list"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Order list" mandatory="true" max_length="4000" name="order_list" reference="x_234969_lunchbox_product" type="reference"/>
         <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
         <element default="javascript:gs.getUserID();" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="User" mandatory="true" max_length="32" name="user" reference="sys_user" type="reference" use_dynamic_default="true"/>
         <index name="index">
