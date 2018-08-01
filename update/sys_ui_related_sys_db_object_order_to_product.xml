@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_related sys_domain="global" table="sys_db_object" version="2" view="order_to_product">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Table - Order to product" name="sys_db_object" related_list="NULL" sys_domain="global" view="bdcb410337a313004032ae7873990ec3">b5cb410337a313004032ae7873990ec6</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>REL:27900e83c3713000bac1addbdfba8fb6</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-31 11:17:36</sys_created_on>
+            <sys_id>31cb858337a313004032ae7873990e8e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-31 11:17:36</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Table - Order to product" name="sys_db_object" related_list="NULL" sys_domain="global" view="bdcb410337a313004032ae7873990ec3">b5cb410337a313004032ae7873990ec6</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>REL:17a52313bf1030001875647fcf0739d4</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-31 11:17:36</sys_created_on>
+            <sys_id>35cb858337a313004032ae7873990e8e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-31 11:17:36</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Table - Order to product" name="sys_db_object" related_list="NULL" sys_domain="global" view="bdcb410337a313004032ae7873990ec3">b5cb410337a313004032ae7873990ec6</list_id>
+            <order_by/>
+            <position>2</position>
+            <related_list>v_index_creator.table</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-31 11:17:36</sys_created_on>
+            <sys_id>39cb858337a313004032ae7873990e8e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-31 11:17:36</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Table - Order to product" name="sys_db_object" related_list="NULL" sys_domain="global" view="bdcb410337a313004032ae7873990ec3">b5cb410337a313004032ae7873990ec6</list_id>
+            <order_by/>
+            <position>3</position>
+            <related_list>REL:a81e90f153311200efd6cbaac2dc3451</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-31 11:17:36</sys_created_on>
+            <sys_id>3dcb858337a313004032ae7873990e8e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-31 11:17:36</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Table - Order to product</calculated_name>
+            <filter/>
+            <name>sys_db_object</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-31 11:17:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b5cb410337a313004032ae7873990ec6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Table - Order to product</sys_name>
+            <sys_package display_value="LunchBox" source="x_234969_lunchbox">f967d835372f13004032ae7873990ed1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="LunchBox">f967d835372f13004032ae7873990ed1</sys_scope>
+            <sys_update_name>sys_ui_related_sys_db_object_order_to_product</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-31 11:17:36</sys_updated_on>
+            <sys_user/>
+            <view display_value="Order to product" name="order_to_product">bdcb410337a313004032ae7873990ec3</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

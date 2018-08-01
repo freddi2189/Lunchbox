@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_db_view_table">
+    <sys_db_view_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <left_join>false</left_join>
+        <order>100</order>
+        <sys_class_name>sys_db_view_table</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-07-30 12:49:14</sys_created_on>
+        <sys_id>d5c6583637e313004032ae7873990e26</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_234969_lunchbox_order</sys_name>
+        <sys_package display_value="LunchBox" source="x_234969_lunchbox">f967d835372f13004032ae7873990ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LunchBox">f967d835372f13004032ae7873990ed1</sys_scope>
+        <sys_update_name>sys_db_view_table_d5c6583637e313004032ae7873990e26</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-07-30 12:54:12</sys_updated_on>
+        <table>x_234969_lunchbox_order</table>
+        <variable_prefix>ord</variable_prefix>
+        <view display_value="x_234969_lunchbox_get_shopping_list">e80690b637e313004032ae7873990e13</view>
+        <where_clause>order_list.product.number = product.number&#13;
+group by(product.product_name)</where_clause>
+    </sys_db_view_table>
+</record_update>

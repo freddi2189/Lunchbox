@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Grocery List" max_length="40" name="x_234969_lunchbox_grocery_list" type="collection">
+        <element label="Delivery date" max_length="40" name="delivery_date" type="glide_date"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Order list" max_length="4000" name="order_list" type="string"/>
+    </element>
+</database>

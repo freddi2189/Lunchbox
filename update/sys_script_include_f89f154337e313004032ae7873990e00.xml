@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_234969_lunchbox.OrderList</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>OrderList</name>
+        <script><![CDATA[var OrderList = Class.create();
+OrderList.prototype = {
+    initialize: function(current, previous) {
+		this.current = current;
+		this.previous = previous;
+    },
+
+	addToOrderList: function() {
+		var productsPerOrder =[];
+		var products = [];
+		var groceryList = new GlideRecord('x_234969_lunchbox_grocery_list');
+		groceryList.addQuery('sys_id', '=', current.grocery_list);
+		groceryList.query();
+		
+		while (groceryList.next()) {
+			var orders = new GlideRecord('x_234969_lunchbox_order');
+			orders.addQuery('order_date', '=', groceryList.delivery_date);
+			orders.addQuery('grocery_list', '=', current.grocery_list);
+			orders.query();
+			
+			while (orders.next()) {	
+				productsPerOrder = (this._getProducts(orders.order_list));
+				
+				for (var i = 0; i < productsPerOrder.length; i++) {
+					products.push(productsPerOrder[i]);
+				}
+			}
+			var countedProducts = this._countProducts(products);
+			groceryList.order_list = countedProducts.join("");
+			groceryList.update();
+		}
+	},
+	
+	_getProducts: function(orderList) {
+		var productIds = orderList.split(',');
+		var products = [];
+		
+		for (var i = 0; i < productIds.length; i++) {
+			var product = new GlideRecord('x_234969_lunchbox_product');
+			product.addQuery('sys_id', '=', productIds[i]);
+			product.query();
+		
+			while (product.next()) {
+				products.push(product.product_name);
+			}
+		}
+		
+		return products;
+	},
+	
+	_countProducts: function(productsArray) {
+		productsArray.sort();
+		var compressed = [];
+		var copy = productsArray.slice(0);
+
+		for (var i = 0; i < productsArray.length; i++) {
+			var count = 0;
+			for (var w = 0; w < copy.length; w++) {
+				
+				if (productsArray[i] == copy[w]) {
+					count++;
+					delete copy[w];
+				}
+			}
+			
+			if (count > 0) {
+				var a = productsArray[i] + ": " + count + "\n";
+				compressed.push(a);
+			}
+		}
+		
+		return compressed;
+	},
+	
+    type: 'OrderList'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-07-31 12:44:47</sys_created_on>
+        <sys_id>f89f154337e313004032ae7873990e00</sys_id>
+        <sys_mod_count>59</sys_mod_count>
+        <sys_name>OrderList</sys_name>
+        <sys_package display_value="LunchBox" source="x_234969_lunchbox">f967d835372f13004032ae7873990ed1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="LunchBox">f967d835372f13004032ae7873990ed1</sys_scope>
+        <sys_update_name>sys_script_include_f89f154337e313004032ae7873990e00</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-07-31 18:08:09</sys_updated_on>
+    </sys_script_include>
+</record_update>

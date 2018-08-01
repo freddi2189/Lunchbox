@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="ae1ad8b9372f13004032ae7873990edd" sys_domain="global" table="x_234969_lunchbox_order" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-27 10:28:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>261ad8b9372f13004032ae7873990ee0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_234969_lunchbox_order" name="x_234969_lunchbox_order" sys_domain="global" view="Default view">ae1ad8b9372f13004032ae7873990edd</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_234969_lunchbox_order" sys_domain="global" view="Default view">cad85079372f13004032ae7873990e38</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-27 10:28:10</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-27 10:28:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>221ad8b9372f13004032ae7873990ee1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_234969_lunchbox_order" name="x_234969_lunchbox_order" sys_domain="global" view="Default view">ae1ad8b9372f13004032ae7873990edd</sys_ui_form>
+            <sys_ui_section caption="Order list" display_value="Order list" name="x_234969_lunchbox_order" sys_domain="global" view="Default view">621ad8b9372f13004032ae7873990edd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-27 10:28:10</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_234969_lunchbox_order</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-27 10:28:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ae1ad8b9372f13004032ae7873990edd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_234969_lunchbox_order</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="LunchBox" source="x_234969_lunchbox">f967d835372f13004032ae7873990ed1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="LunchBox">f967d835372f13004032ae7873990ed1</sys_scope>
+            <sys_update_name>sys_ui_form_sections_ae1ad8b9372f13004032ae7873990edd</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-27 10:28:10</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
