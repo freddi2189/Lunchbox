@@ -15,70 +15,31 @@ OrderList.prototype = {
     },
 
 	addToOrderList: function() {
-		var productsPerOrder =[];
-		var products = [];
-		var groceryList = new GlideRecord('x_234969_lunchbox_grocery_list');
-		groceryList.addQuery('sys_id', '=', current.grocery_list);
-		groceryList.query();
+		var orderList = [];
+		var productAndNumber = "";
+		var gr = new GlideAggregate('x_234969_lunchbox_orderproduct');
+		gr.addQuery('order.grocery_list', current.order.grocery_list);
+		gr.addAggregate('SUM', 'number_of_products');
+		gr.groupBy('product');
+		gr.query();
 		
-		while (groceryList.next()) {
-			var orders = new GlideRecord('x_234969_lunchbox_order');
-			orders.addQuery('order_date', '=', groceryList.delivery_date);
-			orders.addQuery('grocery_list', '=', current.grocery_list);
-			orders.query();
-			
-			while (orders.next()) {	
-				productsPerOrder = (this._getProducts(orders.order_list));
-				
-				for (var i = 0; i < productsPerOrder.length; i++) {
-					products.push(productsPerOrder[i]);
-				}
-			}
-			var countedProducts = this._countProducts(products);
-			groceryList.order_list = countedProducts.join("");
-			groceryList.update();
-		}
-	},
-	
-	_getProducts: function(orderList) {
-		var productIds = orderList.split(',');
-		var products = [];
-		
-		for (var i = 0; i < productIds.length; i++) {
-			var product = new GlideRecord('x_234969_lunchbox_product');
-			product.addQuery('sys_id', '=', productIds[i]);
-			product.query();
-		
-			while (product.next()) {
-				products.push(product.product_name);
-			}
-		}
-		
-		return products;
-	},
-	
-	_countProducts: function(productsArray) {
-		productsArray.sort();
-		var compressed = [];
-		var copy = productsArray.slice(0);
+		while (gr.next()) {
+			productAndNumber += gr.product.product_name + ": " + gr.getAggregate('SUM', 'number_of_products') + "\n";
 
-		for (var i = 0; i < productsArray.length; i++) {
-			var count = 0;
-			for (var w = 0; w < copy.length; w++) {
-				
-				if (productsArray[i] == copy[w]) {
-					count++;
-					delete copy[w];
-				}
-			}
-			
-			if (count > 0) {
-				var a = productsArray[i] + ": " + count + "\n";
-				compressed.push(a);
-			}
 		}
 		
-		return compressed;
+		this._addToShoppingList(productAndNumber);
+	},
+	
+	_addToShoppingList: function(orderList) {
+		var gr = new GlideRecord("x_234969_lunchbox_grocery_list");
+		gr.addQuery("sys_id", current.order.grocery_list);
+		gr.query();
+		
+		while (gr.next()) {
+			gr.order_list = orderList;
+			gr.update();
+		}
 	},
 	
     type: 'OrderList'
@@ -87,13 +48,13 @@ OrderList.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-07-31 12:44:47</sys_created_on>
         <sys_id>f89f154337e313004032ae7873990e00</sys_id>
-        <sys_mod_count>59</sys_mod_count>
+        <sys_mod_count>122</sys_mod_count>
         <sys_name>OrderList</sys_name>
         <sys_package display_value="LunchBox" source="x_234969_lunchbox">f967d835372f13004032ae7873990ed1</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="LunchBox">f967d835372f13004032ae7873990ed1</sys_scope>
         <sys_update_name>sys_script_include_f89f154337e313004032ae7873990e00</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-31 18:08:09</sys_updated_on>
+        <sys_updated_on>2018-08-01 12:18:37</sys_updated_on>
     </sys_script_include>
 </record_update>
